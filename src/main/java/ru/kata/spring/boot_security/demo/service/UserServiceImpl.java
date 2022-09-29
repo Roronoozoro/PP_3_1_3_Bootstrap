@@ -59,7 +59,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    @org.springframework.transaction.annotation.Transactional(readOnly = true)
+    @Transactional
     public UserDetails loadUserByUsername(String username) {
         User user = userDao.findUserByUsername(username);
         return user;

@@ -49,9 +49,8 @@ public class UserDaoImpl implements UserDao {
         if (username == null) {
             throw new UsernameNotFoundException("User not found");
         }
-        User user = query.getSingleResult();
-        user.getRoles().size();
-        return user;
+
+        return query.getSingleResult();
     }
 
     @Override
